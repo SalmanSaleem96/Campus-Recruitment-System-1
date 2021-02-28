@@ -1,9 +1,9 @@
 import React, {useState, useContext} from 'react'
-import {View, Text, TouchableOpacity, Image, StyleSheet} from 'react-native'
+import {View, Text, TouchableOpacity, Image, StyleSheet, ScrollView} from 'react-native'
 import FormInput from '../Components/FormInput';
 import FormButton from '../Components/FormButton';
 import SocialButton from '../Components/SocialButtons';
-
+import { AuthContext } from '../Navigations/AuthProvider'
 
 
 const LoginScreen = ({navigation})=>{

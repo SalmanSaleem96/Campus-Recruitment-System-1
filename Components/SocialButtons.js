@@ -1,6 +1,6 @@
 import React from 'react';
 import {Text, TouchableOpacity, View, StyleSheet} from 'react-native';
-import {windowHeight} from '../utilities/Dimentions';
+import {windowHeight} from '../utilities/Dimensions';
 
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 

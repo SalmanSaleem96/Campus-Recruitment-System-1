@@ -2,7 +2,8 @@ import React, {useContext, useState} from 'react';
 import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 import FormInput from '../Components/FormInput';
 import FormButton from '../Components/FormButton';
-import SocialButton from '../Components/SocialButton';
+import SocialButton from '../Components/SocialButtons';
+import {AuthContext} from '../Navigations/AuthProvider'
 
 const SignupScreen = ({navigation}) => {
   const [email, setEmail] = useState();
