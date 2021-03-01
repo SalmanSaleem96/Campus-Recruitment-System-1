@@ -7,7 +7,7 @@
  */
 
 import React from 'react';
-import Providers from './Navigations/index'
+import Providers from './Navigations'
 
 const App = () => {
   return (

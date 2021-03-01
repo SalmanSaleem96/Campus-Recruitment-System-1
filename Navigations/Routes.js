@@ -1,10 +1,9 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useEffect} from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import AppStack from './AppStacks'
 import AuthStack from './AuthStack'
 import auth from '@react-native-firebase/auth'
 import { AuthContext } from './AuthProvider'
-import { useEffect } from 'react'
 
 const Routes = ()=>{
 
@@ -25,7 +24,7 @@ const Routes = ()=>{
 
     return (
         <NavigationContainer>
-            { user ? <AppStack/> : <AuthStack/>}
+             <AuthStack />
         </NavigationContainer>
     );
 };

@@ -1,9 +1,10 @@
 import React, {useState, useEffect} from 'react';
-import { NavigationContainer } from '@react-navigation/native';
+// import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import {View } from 'react-native'
 import OnboardingScreen from '../Screens/OnboardingScreen'
 import LoginScreen from '../Screens/LoginScreens'
+// import HomeScreen from '../Screens/HomeScreen'
 import SignupScreen from '../Screens/SignupScreen'
 import AsyncStorage from '@react-native-community/async-storage';
 
@@ -26,17 +27,24 @@ function AuthStack() {
   },[])
 
 
-  if (isFirstLaunch == null){
+  if (isFirstLaunch === null){
     return null
   }else if(isFirstLaunch == true){
+    routeName = 'onboardingScreen';
+  }else {
+    routeName = 'LoginScreen';
+  }
     return(
-    <NavigationContainer>
       <Stack.Navigator
         headerMode='none'
-        initialRouteName='onboardingscreen'
+        initialRouteName={routeName}
       >
-        <Stack.Screen name="onboardingscreen" component={OnboardingScreen} />
-        <Stack.Screen name="LoginScreen" component={LoginScreen} />
+        <Stack.Screen name="onboardingscreen" component={OnboardingScreen} 
+          options={{Header:  () => null}}
+        />
+        <Stack.Screen name="LoginScreen" component={LoginScreen} 
+          options={{Header:  () => null}}
+        />
         <Stack.Screen name="SignupScreen" component={SignupScreen} 
           options={({navigation}) => ({
             title: '',
@@ -59,12 +67,8 @@ function AuthStack() {
           })}
         />
       </Stack.Navigator>
-    </NavigationContainer>
       
     )
-  }else{
-    return <LoginScreen/>
-  }
   
 }
 

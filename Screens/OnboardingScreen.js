@@ -7,25 +7,25 @@ const OnboardingScreen = ({navigation})=>{
     return(
         <>
         <Onboarding
-        onSkip={()=>navigation.navigate('SignupScreen')}
-        onDone={()=>navigation.navigate('LoginScreen')}
+        onDone={()=>navigation.navigate('SignupScreen')}
+        onSkip={()=>navigation.navigate('LoginScreen')}
     pages={[
         {
         backgroundColor: '#F5F5F5',
         image: <Image style={{width: 200, height: 200}} source={require('../Assets/onboarding-img1.png')} />,
-        title: 'Welcome',
+        title: 'Welcome...!',
         subtitle: 'Done with React Native Onboarding Swiper',
         },
         {
         backgroundColor: '#F5F5F5',
         image: <Image style={{width: 200, height: 200}} source={require('../Assets/onboarding-img2.png')} />,
-        title: 'Onboarding2',
+        title: "let's Collab...!",
         subtitle: 'Done with React Native Onboarding Swiper',
         }, 
         {
         backgroundColor: '#F5F5F5',
         image: <Image  style={{width: 200, height: 200}} source={require('../Assets/onboarding-img3.png')} />,
-        title: 'Onboarding3',
+        title: 'One Place To Keep All Information',
         subtitle: 'Done with React Native Onboarding Swiper',
         }
     ]}

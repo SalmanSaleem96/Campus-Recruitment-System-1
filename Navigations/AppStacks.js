@@ -16,4 +16,4 @@ const AppStacks = () => {
   )
 }
 
-export default AppStacks
+export default AppStacks;
