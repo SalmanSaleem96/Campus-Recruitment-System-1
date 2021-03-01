@@ -5,7 +5,6 @@ import FormButton from '../Components/FormButton';
 import SocialButton from '../Components/SocialButtons';
 import { AuthContext } from '../Navigations/AuthProvider'
 
-
 const LoginScreen = ({navigation})=>{
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
@@ -67,7 +66,7 @@ const LoginScreen = ({navigation})=>{
     
         <TouchableOpacity
             style={styles.forgotButton}
-            onPress={() => navigation.navigate('SignupScreen')}>
+            onPress={()=> navigation.navigate('SignupScreen')}>
             <Text style={styles.navButtonText}>
             Don't have an acount? Create here
             </Text>

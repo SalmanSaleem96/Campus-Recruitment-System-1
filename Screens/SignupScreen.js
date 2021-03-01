@@ -30,7 +30,7 @@ const SignupScreen = ({navigation}) => {
         labelValue={password}
         onChangeText={(userPassword) => setPassword(userPassword)}
         placeholderText="Password"
-        iconType="lock"
+        iconType='user'
         secureTextEntry={true}
       />
 
@@ -84,7 +84,7 @@ const SignupScreen = ({navigation}) => {
 
       <TouchableOpacity
         style={styles.navButton}
-        onPress={() => navigation.navigate('Login')}>
+        onPress={() => navigation.navigate('LoginScreen')}>
         <Text style={styles.navButtonText}>Have an account? Sign In</Text>
       </TouchableOpacity>
     </View>

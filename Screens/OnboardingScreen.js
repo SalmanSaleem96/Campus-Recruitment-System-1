@@ -1,5 +1,5 @@
 import React from 'react'
-import {View, Text, Button, StyleSheet, Image} from 'react-native'
+import {Image} from 'react-native'
 
 import Onboarding from 'react-native-onboarding-swiper';
 
@@ -7,7 +7,7 @@ const OnboardingScreen = ({navigation})=>{
     return(
         <>
         <Onboarding
-        onSkip={()=>navigation.replace('LoginScreen')}
+        onSkip={()=>navigation.navigate('SignupScreen')}
         onDone={()=>navigation.navigate('LoginScreen')}
     pages={[
         {
